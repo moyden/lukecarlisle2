@@ -1,3 +1,11 @@
+# Jekyll
 _site
 .sass-cache
 .jekyll-metadata
+
+# Node
+node_modules/
+package.json
+
+# Gulp
+gulpfile.js
