@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div id="vuevm" class="container">
+  <header class="site-header">
+    <h1>Luke Carlisle</h1>
+    <p>London based director</p>
+    <ul>
+      <li>e-mail: <a href="mailto:lpwcarlisle@gmail.com">lpwcarlisle@gmail.com</a></li>
+      <li>twitter: <a href="https://twitter.com/carrrlisle">@carrrlisle</a></li>
+      <li>vimeo: <a href="https://vimeo.com/lukecarlisle">lukecarlisle</a></li>
+    </ul>
+  </header>
+
+  <section class="video">
+    <div class="embed-container">
+      <iframe v-bind:src="current.src" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+    </div>
+  </section>
+
+  <nav class="site-nav">
+    <h2>Videos</h2>
+    {% raw %}
+      <ul>
+        <li v-for="item in catalog"
+            v-on:click="loadVideo(item)"
+            class="video-list__item"
+            v-bind:class="{ isActive: item.active}"
+        >
+          {{ item.name }}
+        </li>
+      </ul>
+    {% endraw %}
+  </nav>
+</div>
+
+<script>
+  const videos = [
+    {% for video in site.videos %}
+      {
+        name: '{{ video.title }}',
+        url: '{{ video.vimeo }}'
+      },
+    {% endfor %}
+  ]
+</script>
+<script src="{{ "/js/video-switcher.js" | prepend: site.baseurl }}"></script>

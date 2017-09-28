@@ -1,0 +1,156 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css?family=Exo+2");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  background-color: #000;
+  color: #bbb;
+  font-family: 'Exo 2', sans-serif; }
+
+h1, h2 {
+  color: #fff;
+  margin-bottom: 2em; }
+
+p {
+  margin-bottom: 2em; }
+
+li {
+  margin: 0.75em 0; }
+
+a {
+  color: #bbb;
+  text-decoration: none; }
+
+a:hover {
+  color: #fff; }
+
+body {
+  max-width: 1200px;
+  margin: auto; }
+
+.video {
+  background-color: black; }
+
+.site-header {
+  padding: 2em; }
+
+.site-nav {
+  padding: 2em;
+  text-align: left; }
+
+@media screen and (min-width: 600px) {
+  .container {
+    font-size: 10pt;
+    letter-spacing: 0.05em;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-flow: row wrap;
+    min-width: 600px;
+    max-width: calc(177vh - 30rem);
+    margin: auto; }
+  .video {
+    -webkit-box-flex: 1;
+            flex: 1 1 100%;
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+    padding: 0 2em;
+    margin-top: 3em; }
+  .site-header {
+    -webkit-box-flex: 1;
+            flex: 1 1 50%;
+    -webkit-box-ordinal-group: 3;
+            order: 2; }
+  .site-nav {
+    -webkit-box-flex: 1;
+            flex: 1 1 50%;
+    -webkit-box-ordinal-group: 4;
+            order: 3;
+    text-align: right; } }
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+
+.embed-container embed,
+.embed-container iframe,
+.embed-container object {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%; }
+
+.video-list__item {
+  cursor: pointer;
+  position: relative; }
+
+.video-list__item:hover {
+  color: #fff; }
+
+.video-list__item.isActive {
+  color: #fff; }
+
+.video-list__item.isActive::after {
+  content: '\2022';
+  display: block;
+  position: absolute;
+  left: -1em;
+  top: 0; }
+
+@media screen and (min-width: 600px) {
+  .video-list__item.isActive::after {
+    right: -1em; } }

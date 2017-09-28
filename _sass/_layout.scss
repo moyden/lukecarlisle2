@@ -1,0 +1,47 @@
+body {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.video {
+  background-color: black;
+}
+
+.site-header {
+  padding: 2em;
+}
+
+.site-nav {
+  padding: 2em;
+  text-align: left;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    font-size: 10pt;
+    letter-spacing: 0.05em;
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 600px;
+    max-width: calc(177vh - 30rem);
+    margin: auto;
+  }
+
+  .video {
+    flex: 1 1 100%;
+    order: 1;
+    padding: 0 2em;
+    margin-top: 3em;
+  }
+
+  .site-header {
+    flex: 1 1 50%;
+    order: 2;
+  }
+
+  .site-nav {
+    flex: 1 1 50%;
+    order: 3;
+    text-align: right;
+  }
+}

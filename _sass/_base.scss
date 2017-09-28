@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2');
+
+body {
+  background-color: #000;
+  color: #bbb;
+  font-family: 'Exo 2', sans-serif;
+}
+
+h1, h2 {
+  color: #fff;
+  margin-bottom: 2em;
+}
+
+p {
+  margin-bottom: 2em;
+}
+
+li {
+  margin: 0.75em 0;
+}
+
+a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+}
