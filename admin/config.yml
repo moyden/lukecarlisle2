@@ -6,13 +6,11 @@ backend:
 media_folder: images
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "_posts"
+  - name: "videos"
+    label: "Videos"
+    folder: "_videos"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Categories", name: "categories", widget: "string"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Vimeo Link", name: "vimeo", widget: "string"}
