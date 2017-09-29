@@ -116,6 +116,10 @@ body {
             order: 3;
     text-align: right; } }
 
+@media screen and (min-width: 800px) {
+  .container {
+    min-width: 800px; } }
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;
