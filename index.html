@@ -24,11 +24,10 @@ layout: default
     {% raw %}
       <ul>
         <li v-for="item in catalog"
-            v-on:click="loadVideo(item)"
             class="video-list__item"
             v-bind:class="{ isActive: item.active}"
         >
-          {{ item.name }}
+          <a href="#" v-on:click="loadVideo(item)">{{ item.name }}</a>
         </li>
       </ul>
     {% endraw %}

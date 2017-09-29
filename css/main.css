@@ -138,10 +138,7 @@ body {
   cursor: pointer;
   position: relative; }
 
-.video-list__item:hover {
-  color: #fff; }
-
-.video-list__item.isActive {
+.video-list__item.isActive a {
   color: #fff; }
 
 .video-list__item.isActive::after {
