@@ -14,3 +14,4 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Vimeo Link", name: "vimeo", widget: "string"}
+      - {label: "Display Order", name: "order", widget: "number"}

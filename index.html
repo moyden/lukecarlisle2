@@ -6,11 +6,7 @@ layout: default
   <header class="site-header">
     <h1>Luke Carlisle</h1>
     <p>London based director</p>
-    <ul>
-      <li>e-mail: <a href="mailto:lpwcarlisle@gmail.com">lpwcarlisle@gmail.com</a></li>
-      <li>twitter: <a href="https://twitter.com/carrrlisle">@carrrlisle</a></li>
-      <li>vimeo: <a href="https://vimeo.com/lukecarlisle">lukecarlisle</a></li>
-    </ul>
+    {% include social.html %}
   </header>
 
   <section class="video">
@@ -39,7 +35,8 @@ layout: default
     {% for video in site.videos %}
       {
         name: '{{ video.title }}',
-        url: '{{ video.vimeo }}'
+        url: '{{ video.vimeo }}',
+        order: '{{ video.order }}'
       },
     {% endfor %}
   ]
