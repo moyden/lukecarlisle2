@@ -4,8 +4,8 @@ videos.sort(function (a, b) {
   return a.order - b.order
 })
 
-let re = /http(s)?:\/\/(www\.)?vimeo.com\/(\d+)/
-let vimeos = videos.filter(function (video) {
+var re = /http(s)?:\/\/(www\.)?vimeo.com\/(\d+)/
+var vimeos = videos.filter(function (video) {
   return video.url.match(re) != null
 })
 vimeos.forEach(function (video, i) {
@@ -14,7 +14,7 @@ vimeos.forEach(function (video, i) {
   else video.active = false
 })
 
-const vm = new Vue({
+var vm = new Vue({
   el: '#vuevm',
 
   data: {
